@@ -16,6 +16,6 @@ variable "key_name" {}
 variable "public_key_path" {}
 variable "public_subnet_ids" {}
 variable "private_subnet_ids" {}
-variable "instance_ids" {}
+variable "instance_id" {}
 #variable "zone_name" {}
 variable "sub_domain_1" {}

@@ -75,8 +75,7 @@ resource "aws_lb_listener" "alb-https-listener" {
 
 ##Attach target group to the alb
 resource "aws_lb_target_group_attachment" "attach_tg-to-alb" {
-  count = length(var.instance_ids)
-  target_id        = element(var.instance_ids, count.index % 2)
+  target_id        = var.instance_id
   target_group_arn = aws_lb_target_group.tg.arn
   port             = 80
 }
